@@ -1,0 +1,11 @@
+http://router.vuejs.org/zh-cn/options.html
+
+icomoon  -- component -- icon.vue mint-ui
+sheral   -- scss      -- global.scss
+
+
+header   footer         z-index: 1000
+
+overlay                 z-index: 10100
+
+nav-drawer-menu         z-index: 10200

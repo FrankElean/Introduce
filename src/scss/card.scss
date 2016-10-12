@@ -1,0 +1,69 @@
+﻿
+@import './_vars.scss';
+@import './mixin.scss';
+
+.music-card-list {
+		@if $cardFlexSwitch {
+				display: flex;
+				flex-wrap: wrap;
+		} @else {
+				overflow: hidden;
+		}
+		.card-item {
+				position: relative;
+				width: 100% / $carLineNum;
+				
+				@if not $cardFlexSwitch {
+						float: left;
+				}
+		
+				.item-img-wrap{ // 设置图片默认占位高度
+						@include object-wrap(percentage($cardImgRation), '.item-img');  // 调用sandal中定义的基础mixin
+				}
+				.item-img{
+						width: 100%;
+				}
+				.item-tt {
+						font-size: 12px;
+						line-height: 16px;
+						-webkit-line-clamp: 2;
+						text-overflow: ellipsis;
+						white-space: normal;
+						word-wrap: break-word;
+						overflow: hidden;
+						
+						margin-top: 4px;
+				}
+		}
+}
+@if $cardBorderSwitch{            // border 分割样式
+		.card-list--border{
+				background: #fff;
+				position: relative;
+				@include hairline(top, $border-color);
+				
+				.card-item{
+						padding: $cardGap !important;
+						@include hairline(rb, $border-color); 
+						
+						$type: if($carLineNum == 2, '2n', '3n');    // 2栏 3栏判断
+			
+						&:nth-of-type(#{$type}){
+								&::before{
+										display: none;
+								}
+						}
+				}
+		}
+}
+@if $cardGapSwitch{            // 背景分割样式
+		.card-list--gap{
+				padding-left: $cardGap / 2;
+				padding-right: $cardGap / 2;
+				.card-item{
+						margin-bottom: $cardGap;
+						padding-left: $cardGap / 2;
+						padding-right: $cardGap / 2;
+				}
+		}
+}

@@ -1,0 +1,499 @@
+﻿@charset "utf-8";
+
+@mixin font-shrink ($fs) {
+	  -webkit-box-flex: $fs;
+	  -webkit-flex-shrink: $fs;
+	  -ms-flex: 0 $fs auto;
+	  flex-shrink: $fs;
+}
+
+
+@mixin transition($d) {
+	  -webkit-transition-duration: $d;
+	  transition-duration: $d;
+}
+@mixin delay($d) {
+	  -webkit-transition-delay: $d;
+	  transition-delay: $d;
+}
+
+@mixin transform($t) {
+	  -webkit-transform: $t;
+	  transform: $t;
+}
+
+
+@mixin transform-origin($to) {
+	  -webkit-transform-origin: $to;
+	  transform-origin: $to;
+}
+
+// Preserve3D
+@mixin preserve3d() {
+	  -webkit-transform-style: preserve-3d;
+	  -moz-transform-style: preserve-3d;
+	  -ms-transform-style: preserve-3d;
+	  transform-style: preserve-3d;
+}
+
+
+@mixin translate3d($x:0, $y:0, $z:0) {
+	  -webkit-transform: translate3d($x,$y,$z);
+	  transform: translate3d($x,$y,$z);
+}
+
+@mixin animation ($a) {
+	  -webkit-animation: $a;
+	  animation: $a;
+}
+
+@mixin scrollable() {
+	  overflow: auto;
+	  -webkit-overflow-scrolling: touch;
+}
+
+@mixin flex-shrink($fs) {
+	  -webkit-box-flex: $fs;
+	  -webkit-flex-shrink: $fs;
+	  -ms-flex: 0 $fs auto;
+	  flex-shrink: $fs;
+}
+
+@mixin clearfix() {
+	  &:after,
+	  &:before {
+		content: " ";
+		display: table;
+	  }
+	  &:after {
+		clear: both;
+	  }
+}
+
+// 1像素边框
+@mixin hairline($position, $color) {
+      
+	  @if ($position == 'top'){
+			  &::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: auto;
+					right: auto;
+					height: 0;
+					width: 100%;
+        			border-top: 1px solid $color;
+					
+					// .transform-origin(50% 0%);
+					html.pixel-ratio-2 & {
+					      @include transform(scaleY(0.5));
+					}
+					html.pixel-ratio-3 & {
+					      @include transform(scaleY(0.33));
+					}
+			  }
+	  }
+	  @else if ($position == 'right') {
+			  &::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					top: 0;
+					left: auto;
+					bottom: auto;
+					width: 0px;
+					height: 100%;
+        			border-left: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleX(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleX(0.33));
+					}
+			  }
+	  }
+	  @else if ($position == 'bottom') {
+			  &::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					right: auto;
+					top: auto;
+					height: 0;
+					width: 100%;
+        			border-top: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleY(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleY(0.33));
+					}
+			  }
+	  }
+	  @else if ($position == 'left') {
+			  &::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: auto;
+					right: auto;
+					width: 0px;
+					height: 100%;
+        			border-left: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleX(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleX(0.33));
+					} 
+			  }
+	  }
+	  @else if ($position == 'left') {
+			  &::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: auto;
+					right: auto;
+					width: 0px;
+					height: 100%;
+        			border-left: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleX(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleX(0.33));
+					} 
+			  }
+	  }
+	   @else if ($position == 'rb') {
+	          &::before, &::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					bottom: 0;
+			  }
+	
+			  &::before {
+					top: 0;
+					width: 0px;
+					height: 100%;
+        			border-left: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleX(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleX(0.33));
+					}
+			   }
+			   &::after {
+					left: 0;
+					height: 0;
+					width: 100%;
+        			border-top: 1px solid $color;
+					// .transform-origin(100% 50%);
+					html.pixel-ratio-2 & {
+					  	   @include transform(scaleY(0.5));
+					}
+					html.pixel-ratio-3 & {
+					  	   @include transform(scaleY(0.33));
+					}
+			    }
+	   }
+}
+
+// left==top   right==bottom 发生冲突
+// For right and bottom   
+@mixin hairline-rb($position, $color) {
+
+}
+
+
+// For left and top
+@mixin hairline-color($position, $color){
+     @if not ($position = right) and not ($position = bottom) {
+			  &::before {
+				border-color: $color;
+			  } 
+	 }
+}
+
+// triangle
+@mixin triangle($direction, $size, $borderColor ) {
+		content:"";
+		height: 0;
+		width: 0;
+		
+		@if $direction == top {
+				border-bottom:$size solid $borderColor;
+				border-left:$size dashed transparent;
+				border-right:$size dashed transparent;
+		} 
+		@else if $direction == right {
+				border-left:$size solid $borderColor;
+				border-top:$size dashed transparent;
+				border-bottom:$size dashed transparent;
+		} 
+		@else if $direction == bottom {
+				border-top:$size solid $borderColor;
+				border-left:$size dashed transparent;
+				border-right:$size dashed transparent;
+		} 
+		@else if $direction == left {
+				border-right:$size solid $borderColor;
+				border-top:$size dashed transparent;
+				border-bottom:$size dashed transparent;
+		}
+}
+
+// For left and top
+@mixin hairline-remove($position) {
+     @if not ($position == right) and not  ($position == bottom) {
+			  &::before {
+					display: none;
+			  }
+	 }
+	 
+	 @if ($position == left) or ($position == bottom){
+	          &::after {
+					display: none;
+			  }
+	 }
+}
+
+
+
+
+
+// Shadow    设置默认值为1*/
+@mixin depth($level: 1) {
+
+	  @if ($level == 1) {
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	  }
+	  @else if ($level == 2) {
+			box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	  }
+	  @else if ($level == 3) {
+			box-shadow: 0 4px 6px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	  }
+	  @else if ($level == 4) {
+			box-shadow: 0 6px 8px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	  }
+	  @else if ($level == 5) {
+			box-shadow: 0 8px 10px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	  }
+}
+
+
+// Highlighted Links
+@mixin active-highlight($color:rgba(255, 255, 255, 0.15)){
+	  &::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $color;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100% 100%;
+			opacity: 0;
+			pointer-events: none;
+			@include transition(600ms);
+	  }
+	  &.active-state:before,
+	  html:not(.watch-active-state) &:active:before {
+			opacity: 1;
+			@include transition(150ms);
+	  }
+}
+
+
+@mixin active-highlight-color($color) {
+	  &:before {
+			background-image: -webkit-radial-gradient(center, circle cover, $color 66%, rgba(red($color),green($color),blue($color),0) 66%);
+			background-image: radial-gradient(circle at center, $color 66%, rgba(red($color),green($color),blue($color),0) 66%);
+	  }
+}
+
+
+
+@mixin border ($color) {
+	  color: $color;
+	  content: " ";
+	  width: 100%;
+	  height: 1px;
+	  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+			transform: scaleY(.5);
+	  }
+}
+
+@mixin border-top ($color) {
+	  position: relative;
+	
+	  &::after {
+			color: $color;
+			content: " ";
+			width: 100%;
+			height: 1px;
+			@media screen and (-webkit-min-device-pixel-ratio: 2) {
+				   transform: scaleY(.5);
+			}
+			@media screen and (-webkit-min-device-pixel-ratio: 3) {
+				   transform: scaleY(.333333);
+			}
+			border-top: 1px solid;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			transform-origin: 0 0;
+	  }
+}
+
+
+
+@mixin border-bottom ($color) {
+	  position: relative;
+	
+	  &::before {
+			color: $color;
+			content: " ";
+			width: 100%;
+			height: 1px;
+			@media screen and (-webkit-min-device-pixel-ratio: 2) {
+				   transform: scaleY(.5);
+			}
+			@media screen and (-webkit-min-device-pixel-ratio: 3) {
+				   transform: scaleY(.333333);
+			}
+			border-bottom: 1px solid;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transform-origin: 0 100%;
+	  }
+}
+
+/**
+
+// Encoded SVG Background
+@mixin encoded-svg-background($svg) {
+	  $url: `encodeURIComponent(${svg})`;
+	  background-image: url("data:image/svg+xml;charset=utf-8,${url}");
+}
+*/
+
+
+
+/*是否支持某个浏览器的前缀，如果你不想支持，可以设置为false*/
+
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default;     // 标准版 
+
+// prefixer
+@mixin prefixer ($property, $value, $prefixes) {
+	  @each $prefix in $prefixes {
+	
+			@if $prefix == webkit and $prefix-for-webkit == true {
+			  		-webkit-#{$property}: $value;
+			}
+			@else if $prefix == moz and $prefix-for-mozilla == true {
+			  		-moz-#{$property}: $value;
+			}
+			@else if $prefix == ms and $prefix-for-microsoft == true {
+			  		-ms-#{$property}: $value;
+			}
+			@else if $prefix == o and $prefix-for-opera == true {
+			  		-o-#{$property}: $value;
+			}
+			@else if $prefix == spec and $prefix-for-spec == true {
+			  		#{$property}: $value;
+			}
+			@else {
+			  		@warn "Unrecognized prefix: #{$prefix}";
+			}
+	  }
+}
+
+
+//webki和标准
+@mixin box-shadow($shadow...) {
+      @include prefixer(box-shadow, $shadow, webkit spec);
+}
+
+//webkit moz 和标准
+@mixin box-sizing($type:border-box) {
+	  // border-box | padding-box | content-box
+	  @include prefixer(box-sizing, $type, webkit moz spec);
+}
+
+//webkit moz o 和标准
+@mixin transform($property...) {
+       @include prefixer(transform, $property, webkit moz o spec);
+}
+
+//设置宽高，默认为auto
+// length($var)表示获取变量的长度   nth($var,index)获取变量第几个位置的值，unitless判断是否无单位
+// 三目判断，第一个是条件，第二个是条件为真的时候的值，第三个是条件为假的时候的值
+@mixin size($size...) {
+	  $size: if(length($size) > 0, $size, auto);     
+	  $width: nth($size, 1);
+	  $height: nth($size, length($size));
+	
+	  @if $width != auto {
+			$width: if(unitless($width), $width + px, $width);
+	  }
+	  @if $height != auto {
+			$height: if(unitless($height), $height + px, $height);
+	  }
+	
+	  width: $width;
+	  height: $height;
+}
+
+// object wrap
+// $child 参数请使用单引号，因为用于子元素选择器
+@mixin object-wrap($percent: 100%, $child: 'img') {
+		display: block;
+		position: relative;
+		padding-top: $percent;
+		height: 0;
+	
+		#{unquote($child)} {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+		}
+}
+
+// No Scrollbar
+@mixin no-scrollbar() {
+	  &::-webkit-scrollbar {
+			display: none !important;
+			width: 0 !important;
+			height: 0 !important;
+			-webkit-appearance: none;
+			opacity: 0 !important;
+	  }
+}
+
+
+

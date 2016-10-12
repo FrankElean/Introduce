@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+$colorLink:                      #333;
+$colorBg:                        #f5f5f5;
+
+// 导入[sandal](https://github.com/marvin1023/sandal) 
+@import "../assets/sheral/core";
+@import "../assets/sheral/ext/helper";
+@import "../assets/sheral/ext/icons";
+
+.guide-title{
+    margin: 10px 0 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.site-slogan{
+	line-height: 2;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+}
+.site-source{
+	text-align: center;
+	// line-height: 2;
+	margin-bottom: 20px;
+	.link{
+		color: $primary;
+	}
+}
+/**
+// btn
+//-------------------------------------------------
+@import "../assets/sheral/components/btn";
+
+// layout
+//-------------------------------------------------
+@import "../assets/sheral/components/layout";
+
+// remind
+//-------------------------------------------------
+@import "../assets/sheral/components/remind";
+
+// overlay
+//-------------------------------------------------
+@import "../assets/sheral/components/overlay";
+
+// header
+//-------------------------------------------------
+@import "../assets/sheral/components/header";
+
+// footer nav
+//-------------------------------------------------
+@import "../assets/sheral/components/nav";
+
+// line list
+//-------------------------------------------------
+@import "../assets/sheral/components/line-list";
+
+// toast
+//-------------------------------------------------
+@import "../assets/sheral/components/toast";
+
+// dialog
+//-------------------------------------------------
+@import "../assets/sheral/components/dialog";
+
+// popover
+//-------------------------------------------------
+@import "../assets/sheral/components/popover";
+
+// cell-list
+//-------------------------------------------------
+@import "../assets/sheral/components/cell-list";
+
+// card-list
+//-------------------------------------------------
+@import "../assets/sheral/components/card-list";
+
+// media-list
+//-------------------------------------------------
+@import "../assets/sheral/components/media-list";
+
+// tool
+//-------------------------------------------------
+@import "../assets/sheral/components/tool";
+
+// form
+//-------------------------------------------------
+@import "../assets/sheral/components/form";
+
+// panel
+//-------------------------------------------------
+@import "../assets/sheral/components/panel";
+
+// picker
+//-------------------------------------------------
+@import "../assets/sheral/components/picker";
+
+// filter
+//-------------------------------------------------
+@import "../assets/sheral/components/filter";
+
+// actionsheet
+//-------------------------------------------------
+@import "../assets/sheral/components/actionsheet";
+
+// search
+//-------------------------------------------------
+@import "../assets/sheral/components/search";
+
+// alone-back
+//-------------------------------------------------
+@import "../assets/sheral/components/alone-back";
+
+// infinite-loading
+//-------------------------------------------------
+@import "../assets/sheral/components/infinite-loading";
+
+// range
+//-------------------------------------------------
+@import "../assets/sheral/components/range";
+
+// progress
+//-------------------------------------------------
+@import "../assets/sheral/components/progress";
+
+// tag
+//-------------------------------------------------
+@import "../assets/sheral/components/tag";
+
+// stepper
+//-------------------------------------------------
+@import "../assets/sheral/components/stepper";
+
+// article
+//-------------------------------------------------
+@import "../assets/sheral/components/article";
+
+// line-equal
+//-------------------------------------------------
+@import "../assets/sheral/components/line-equal";
+
+// full-screen-view
+//-------------------------------------------------
+@import "../assets/sheral/components/full-screen-view";
+*/

@@ -1,0 +1,94 @@
+$body-color: #7e848c;
+
+$main: #3fc1fd;
+$color: #474a4f;
+$border-color: rgba(0, 0, 0, 0.10);
+
+
+$draw-head-back-color: #eee;
+$draw-head-font-color: #666;
+
+$menu-font-color:#7e848c ;
+$menu-font-size: 14px ;
+
+
+$red: #ff5252;
+$green: #4caf50;
+$amber: #ffc107;
+$blue: #3fc1fd;
+
+$tap-color: rgba(0, 0, 0, .1);
+
+$header-height: 50px;
+$bar-height: 48px;
+
+$color-blue: #26a2ff;
+$color-white: #fff;
+$color-grey: #d9d9d9;
+$success-color: #4caf50;
+$error-color: #f44336;
+$warning-color: #ffc107;
+
+$cell-value-color: #888;
+
+
+
+/**初始z-index设置*/
+$z-index-normal: 1000;
+
+/**buttom样式设置*/
+$button-default-color: #656b79;
+$button-default-background-color: #f6f8fa;
+$button-default-plain-color: #5a5a5a;
+$button-default-box-shadow: 0 0 1px #b8bbbf;
+$button-primary-color: #fff;
+$button-primary-background-color: #26a2ff;
+$button-danger-color: #fff;
+$button-danger-background-color: #ef4f4f;
+
+
+$nav-font-color: #474a4f;
+$nav-selected-fcolor: $main;
+
+/**buttom导航tab设置*/
+$tab-item-font-size: 14px;
+
+$tabbar-bcolor: #fafafa;
+$tabbar-selected-bcolor: #eaeaea;
+$tabbar-selected-fcolor: $main;
+
+
+/**icon字体设置*/
+$fontFamily: iconfont; /*/字体名，默认为FontAwesome字体*/
+$fontFilePath: "./iconfont.ttf"; /*/字体路径，默认为/*/
+
+
+
+
+
+
+//==============Card=====================
+$cardFlexSwitch:       false !default; // 默认使用float布局
+$cardGap:              6px !default; // 默认间距6px
+$cardImgRation:        1 !default; // 图片比例
+$carLineNum:           3 !default; // 目前只支持2 或 3 等分
+
+$cardBorderSwitch:     false !default; // 使用边框分割
+
+$cardGapSwitch:        false !default; // 使用间隙分割
+
+
+
+//==============Cell=====================
+$cellNum:           4 !default;
+$cellIconSize:      24px !default;
+$cellPadding:       15px !default; // 非正方形格式，上下padding
+
+$cellSquareSwitch:  true !default; // 正方形格子
+
+
+
+
+
+
+

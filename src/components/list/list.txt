@@ -1,0 +1,13 @@
+list		mint-list-wrap
+		
+item			mint-list-view          仅左侧设置内补白
+item-cell		mint-list-view-cell     内补白填充
+		
+				 
+itme-media					list-item-media
+item-content				list-item-content
+									item-title-row
+									item-title          超出两行则隐藏字体较大 14
+									item-title-after
+							item-sub-title              超出一行则隐藏 字体较小 12
+							item-text

@@ -1,0 +1,49 @@
+﻿
+@import './_vars.scss';
+@import './mixin.scss';
+
+
+
+.music-cell-list{
+		background: #fff;
+		position: relative;
+		overflow: hidden;
+		@include hairline(top, $border-color);
+		
+		.cell-item{
+				float: left;
+				width: 100% / $cellNum;
+				text-align: center;
+				position: relative;
+				padding: $cellPadding 0;
+				@include hairline(rb, $border-color);
+				
+				&:nth-of-type($cellNum) {
+						&::after{
+								display: none;
+						}
+				}
+				.item-icon{
+						width: 100%;
+						height: $cellIconSize;
+						color: $main;
+				}
+		}
+}
+
+
+@if $cellSquareSwitch {
+		.cell-list--square {
+				.cell-item{
+						padding-top: 100% / $cellNum;
+						padding-bottom: 0;
+						height: 0;
+				}
+				.item-inner{
+						position: absolute;
+						width: 100%;
+						top: 50%;
+						transform: translateY(-50%);
+				}
+		}
+}
