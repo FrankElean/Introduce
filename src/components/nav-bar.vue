@@ -6,11 +6,11 @@
 
 <script>
 /**
-  @param {boolean} [fixed=false] - 固定底部
+  @param {boolean} [fixed=false] - 是否固定
   @param {} selected - 返回 item component 传入的 value
   <mt-navbar :selected.sync="selected" fixed>
-		<mt-tab-item :value="['发现', '推荐']">
-		  		<span slot="label">发现</span>
+		<mt-tab-item :value="['歌单', '个性推荐']">
+		  		<span slot="label">个性推荐</span>
 		</mt-tab-item>
   </mt-navbar>
  
@@ -20,7 +20,7 @@ export default {
 	
 	  props: {
 			fixed: Boolean,
-			selected: {}
+			selected: 1
 	  }
 };
 </script>

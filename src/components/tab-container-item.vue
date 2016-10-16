@@ -1,5 +1,5 @@
 <template>
-	    <div v-show="$parent.swiping || id === $parent.active" class="music-tab-container-item">
+	    <div class="swiper-slide">
 			   <slot></slot>
 	    </div>
 </template>
