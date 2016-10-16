@@ -1,9 +1,9 @@
 <template>
-	  <div id="app">
+	  <div id="music">
 			  
 			  <router-view></router-view>
-			  <toast></toast>
 			  <left-drawer-nav></left-drawer-nav>
+			  <toast></toast>
 			  <!--guide></guide-->
 	  </div>
 </template>
@@ -18,7 +18,7 @@ import store from './vuex/store'
 import {setToastContent, setToastShow} from './vuex/actions' 
 
 export default {
-
+      name: 'Music',
       data() {
 	         return {
 			       
@@ -98,7 +98,7 @@ export default {
 		 }
 	}
 	
-	#app {
+	#music {
 		  flex: 1;
 		  padding-top: 50px;
 		  overflow: hidden;

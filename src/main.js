@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
 import Zepto from 'zepto'
-import App from './App'
+import Music from './App'
 
 import resource from 'vue-resource'
 
@@ -53,7 +53,7 @@ Object.keys(filters).forEach(key => {
 })
 
 
-router.start(App, 'app')
+router.start(Music, 'music')
 
 
 
