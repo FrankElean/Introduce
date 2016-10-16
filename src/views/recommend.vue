@@ -47,7 +47,7 @@ import viewRankList from '../views/recommend/rank-list'
 import mcNavBar from '../components/nav-bar'
 import mcNavItem from '../components/nav-item'
 
-import mcTabContainer from './../components/tab-container'
+import mcTabContainer from './../components/tab-container-swipe'
 import mcTabContainerItem from './../components/tab-container-item'
 
 export default {
