@@ -77,7 +77,7 @@ export default {
 		  font-family: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
 		  
 		  color: #474a4f;
-		  font-size: 16px;
+		  font-size: 14px;
 		  
 		  user-select: none; // 禁止用户选择文字
 		  -webkit-tap-highlight-color: transparent; //去掉触摸遮盖层
