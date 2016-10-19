@@ -120,7 +120,7 @@ export default {
 												this.acoustic = data.acoustic;
 												this.similarity = data.similarity;
 										})
-										Zepto('.container').css('overflow', 'visible')
+										
 										setTimeout(()=>{
 											 this.sheetVisible = true
 										}, 0)
