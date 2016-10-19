@@ -1,5 +1,5 @@
 <template>
-	  <div class="music-action-sheet" :class="{'is-left': textAlign}" :visible.sync="visible"  v-show="visible" transition="action-fade">
+	  <div class="music-action-sheet" :class="{'is-left': textAlign}" :visible.sync="visible"  v-show="visible" transition="action-fade" style="z-index: 20000">
 	            <div class="music-action-title" v-if="actionTitle.length" v-text="actionTitle"></div>
 			    <ul class="music-action-list" :style="{'font-size':fontSize+'px'}">
 				           
@@ -81,7 +81,7 @@ import popupManager from './popup-manager'
 			methods: {
 			        // overwrite manager class method 覆写方法
 			        overlayClick: function(){
-					        Zepto('.container').css('overflow', '')
+					        
 					        if(this.allowClickOverlayClose) this.visible = false;
 					},
 			        actionEvent: function(action, event) {
