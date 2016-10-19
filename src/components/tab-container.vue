@@ -29,6 +29,8 @@ if (!Array.prototype.findIndex) {
 			return -1;
 	  };
 }
+
+
 import {once} from 'wind-dom/src/event';
 
 export default {
@@ -181,7 +183,6 @@ export default {
 						
                         this.direction = moveing = (90 - touchAngle) < 60;
 						
-						console.log(moveing)
 						if (moveing) return;   // 如果是纵向滑动则返回
 						
 						evt.preventDefault();  // 如果是横向滑动则阻止默认行为, 即阻止滚屏
