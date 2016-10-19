@@ -1,0 +1,71 @@
+﻿{
+    "msg": "v2/result",
+    "status": 1,
+     "code": 200,
+    "token": "ms5c4h",
+	"data": [{
+		
+	        "pic":"http://p3.music.126.net/s3qP7zLxbhsgVD6PY8iJhw==/3242459794245984.jpg",
+			"title":"如果你也听歌",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400",
+			"id": 10		
+	}, {
+		
+	        "pic":"http://p4.music.126.net/fxY5m7AJizUi0aYAqTGDDA==/1410673426392059.jpg",
+			"title":"蓝绿调频",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400",
+			"id": 12					
+	},{
+		
+	        "pic":"http://p3.music.126.net/s3qP7zLxbhsgVD6PY8iJhw==/3242459794245984.jpg",
+			"title":"如果你也听歌",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400"	,
+			"id": 14				
+	}, {
+		
+	        "pic":"http://p4.music.126.net/fxY5m7AJizUi0aYAqTGDDA==/1410673426392059.jpg",
+			"title":"蓝绿调频",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400"	,
+			"id": 16				
+	},{
+		
+	        "pic":"http://p3.music.126.net/s3qP7zLxbhsgVD6PY8iJhw==/3242459794245984.jpg",
+			"title":"如果你也听歌",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400"	,
+			"id": 18				
+	}, {
+		
+	        "pic":"http://p4.music.126.net/fxY5m7AJizUi0aYAqTGDDA==/1410673426392059.jpg",
+			"title":"蓝绿调频",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400"	,
+			"id": 20				
+	},{
+		
+	        "pic":"http://p3.music.126.net/s3qP7zLxbhsgVD6PY8iJhw==/3242459794245984.jpg",
+			"title":"如果你也听歌",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400",
+			"id": 22				
+	}, {
+		
+	        "pic":"http://p4.music.126.net/fxY5m7AJizUi0aYAqTGDDA==/1410673426392059.jpg",
+			"title":"蓝绿调频",
+			"desc":"全景音效环绕",
+			"time": "14856524525",
+			"subscripe": "400",
+			"id": 24					
+	}]
+}

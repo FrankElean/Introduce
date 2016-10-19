@@ -1,0 +1,16 @@
+﻿{
+    "msg": "OK",
+	"token": "ms5c4h",
+	"code": 200,
+    "data": {
+        "detail": {
+                "pic": "http://p3.music.126.net/1TEjiGT-PdXStGNK0S1JQw==/6637751698576800.jpg?param=600y600",
+                "name": "欧美 经典怀久 电影原声 特色旋律",
+				"playcount": "1054562"
+         },
+		 "commends": [],
+		 "hotcommends": [],
+		 "more": true,
+		 "total": 416
+     }
+}
