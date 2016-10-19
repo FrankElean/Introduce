@@ -62,8 +62,8 @@ export default {
      .music-form-switch {
 	        position: relative;
 			display: inline-block;
-			height: 36px;
-			line-height: 36px;
+			height: 30px;
+			line-height: 30px;
 			margin-right: 32px;
 			color: $body-color;
 			
@@ -130,9 +130,9 @@ export default {
 	 }
 	 
 	 .switch-checkbox {
-	        width: 36px;
+	        width: 30px;
 			height: 14px;
-			border-radius: 36px;
+			border-radius: 30px;
 			background: #b0afaf;
 			z-index: 0;
 			margin: 0;
