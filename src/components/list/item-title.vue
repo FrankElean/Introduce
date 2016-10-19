@@ -33,7 +33,7 @@ export default {
 			color: $color;
 			max-width: 100%;
 			text-align: left;
-			positin: relative;
+			position: relative;
 	 }
 
 </style>

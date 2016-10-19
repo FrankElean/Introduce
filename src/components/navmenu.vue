@@ -92,7 +92,7 @@ export default {
 					align-items: center;
 			 
 			        .nav-menu-title {
-					       font-size: menu-font-size;
+					       font-size: $menu-font-size;
 						   @include font-shrink(10);
 					}
 					.nav-menu-after {
