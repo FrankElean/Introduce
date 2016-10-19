@@ -26,7 +26,7 @@ export default {
 	        position: relative;
 			white-space: nowrap;
 			word-break: break-all;
-			text-transform: captalize;
+			text-transform: capitalize;
 			text-overflow: ellipsis;
 			overflow: hidden;
 			
