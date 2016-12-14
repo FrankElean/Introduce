@@ -1,0 +1,21 @@
+﻿{
+    "msg": "OK",
+	"code": 200,
+	"token": "ms5c4h",
+    "data": {
+			"chansonnier": "Britney Spears",
+			"album": {
+			        "id": 2315,
+					"name": "The Unreleased" 	
+			}, 
+			"acoustic": "320kbit/s", 
+			"similarity": {
+				
+				
+			}, 
+			"recomment": {
+				
+				
+			}
+    }
+}

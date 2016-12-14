@@ -1,0 +1,23 @@
+﻿{
+    "msg": "OK",
+	"code": 200,
+	"token": "ms5c4h",
+	"signtype": "1",
+	"account": {
+		  "status": 0,
+		  "type": 0,
+		  "uid": "4000",
+		  "createtime":"142565245215",
+		  "username": "Share-Music"
+	},
+	"profile":{
+	        "authstatus": 0,
+	        "authority": 0,
+	        "avatarpic": "",
+	        "city": "002",
+	        "desription": ".....",
+	        "experttag": "欧美|流行|电子",
+			"usertype":0,
+			"id":"13037461"
+	}
+}
